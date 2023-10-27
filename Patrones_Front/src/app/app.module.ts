@@ -16,6 +16,7 @@ import { RegistroComponent } from './auth/registro.component';
 import { MenuComponent } from './menu/menu.component';
 import { IndexComponent } from './index/index.component';
 import { PantallaInicioComponent } from './pantalla-inicio/pantalla-inicio.component';
+import { CrearEscuelaComponent } from './crear-escuela/crear-escuela.component';
 
 
 
@@ -26,7 +27,8 @@ import { PantallaInicioComponent } from './pantalla-inicio/pantalla-inicio.compo
     RegistroComponent,
     MenuComponent,
     IndexComponent,
-    PantallaInicioComponent
+    PantallaInicioComponent,
+    CrearEscuelaComponent
   ],
   imports: [
     BrowserModule,
