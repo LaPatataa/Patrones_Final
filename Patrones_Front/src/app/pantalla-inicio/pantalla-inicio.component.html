@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg">
+  <a class="navbar-brand" href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item" *ngIf="!isLogged">
+        </li>
+        <li class="nav-item" *ngIf="isLogged" (click)="onLogOut()">
+          <a id="jose" class="nav-link" style="cursor: pointer;"><i class="fas fa-door-open" ></i> Cerrar Sesión</a>
+        </li>
+    </ul>
+  </div>
+</nav>
+  <div class="label">
+    <h4>Select School</h4>
+  </div>
+
+    <div class="contenedor C1">
+      <div class="card">
+        <div class="Sign-Up">
+          <a class="nav-link active">Managment Of Food</a>
+        </div>
+      </div>
+    </div>
+    <div class="contenedor C2">
+        <div class="card">
+          <div class="Sign-Up">
+            <a class="nav-link active">College Enrollment</a>
+          </div>
+        </div>
+      </div>
+    <button class="btn R1">Colegio</button>
+    <button class="btn R2">Colegio</button>
+    <button class="btn R3">Colegio</button>
+    <button class="btn R4">Colegio</button>
+    <button class="btn R5">Enter School</button>

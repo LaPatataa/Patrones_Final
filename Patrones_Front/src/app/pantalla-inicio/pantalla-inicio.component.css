@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.navbar{
+    background-color: rgb(255, 205, 41);
+    height: 80px;
+    width: 100%;
+    position:absolute;
+    top: 0px;
+}
+
+#jose{
+  position:absolute;
+  top: 20px;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+    left: 100px;
+    width:1300px;
+}
+.C1{
+    margin-top: 270px;    
+}
+.C2{
+    margin-top: 350px;    
+}
+.card{
+    border: none;
+}
+
+.Sign-Up{
+    text-align: center;
+}
+.label{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    position: absolute;
+    left: 250px;
+    top: 220px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px; 
+  }
+  
+  .form-group label {
+    flex: 1; 
+    margin-right: 50px; 
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .form-group input {
+    flex: 2;
+    width: 350px; 
+    background-color: black;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+  }
+
+  input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px rgb(1, 1, 1) inset;
+    font-family: 'Roboto', sans-serif;
+    -webkit-text-fill-color: #f4f4f4;
+  }
+
+  .btn{
+    position: absolute;
+    top: 275px;
+    left: 40px;
+    background-color: black; 
+    color: white; 
+    border: none;
+    width: 150px;
+    font-family: 'Roboto', sans-serif;
+    height: 120px;
+  }
+  .R1{
+    position: absolute;
+    left: 250px;
+  }
+  .R2{
+    position: absolute;
+    left: 525px;
+  }
+  .R3{
+    position: absolute;
+    left: 800px;
+  }
+  .R4{
+    position: absolute;
+    left: 1075px;
+  }
+  .R5{
+    position: absolute;
+    top: 600px;
+    left: 660px; 
+  }
+  .nav-link{
+    position:absolute;
+    background-color: rgb(255, 205, 41);
+    padding: 10px 20px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    transform: scale(1.05); 
+    left: -150px;
+    top: -125px;
+    width: 450px;
+    height: 50px;
+  }
