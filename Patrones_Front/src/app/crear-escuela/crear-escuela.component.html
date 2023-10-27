@@ -1,0 +1,39 @@
+<div class="text-center" *ngIf="isLogged; else loggedOut">
+    <h2>Ya has iniciado sesión</h2>
+  </div>
+  
+  <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+      </ul>
+    </div>
+  </nav>
+
+  <div class="contenedor d-flex justify-content-center">
+    <div class="card">
+      <div class="Sign-Up">
+        <a class="nav-link active">Crear Escuela</a>
+      </div>
+        <div class="card-body">
+            <form >
+                <div class="form-group nombre">
+                    <label for="nombreUsuario">Nombre de la institucion</label>
+                    <input type="text" name="nombreUsuario" ngModel required>
+                </div>
+                <div class="form-group db">
+                    <label for="archivo">Suba el archivo xls</label>
+                    <input type="file" (change)="onFileSelected($event)" accept=".xls" ngModel required>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-outline-success btn-block">
+                        <i class="fas"></i>Ingresar Escuela</button>
+                </div>                
+            </form>
+        </div>
+    </div>
+</div>

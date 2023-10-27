@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IndexComponent } from './index/index.component';
 import { LoginComponent } from './auth/login.component';
 import { RegistroComponent } from './auth/registro.component';
+import { CrearEscuelaComponent } from './crear-escuela/crear-escuela.component';
 import { PantallaInicioComponent } from './pantalla-inicio/pantalla-inicio.component';
 import { ProdGuardService as guard } from './guards/prod-guard.service';
 
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'registro', component: RegistroComponent },
   { path: 'pantalla-inicio', component: PantallaInicioComponent },
+  { path: 'crear-escuela', component: CrearEscuelaComponent },
   { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 
