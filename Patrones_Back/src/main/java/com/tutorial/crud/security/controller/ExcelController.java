@@ -7,6 +7,8 @@ import com.tutorial.crud.security.service.EstudianteService;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -30,8 +32,8 @@ public class ExcelController {
 
     @PostMapping("/cargar")
     public ResponseEntity<String> cargarArchivo(@RequestParam("nombreEscuela") String nombreEscuela, @RequestParam("archivo") MultipartFile archivo) {
-        try (HSSFWorkbook workbook = new HSSFWorkbook(archivo.getInputStream())) {
-            HSSFSheet sheet = workbook.getSheetAt(0);
+        try (XSSFWorkbook workbook = new XSSFWorkbook(archivo.getInputStream())) {
+            XSSFSheet sheet = workbook.getSheetAt(0);
 
             Iterator<Row> rowIterator = sheet.iterator();
 
