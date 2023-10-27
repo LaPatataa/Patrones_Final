@@ -19,7 +19,6 @@ export class BackendService {
     return this.http.post(this.backendUrl, formData)
     .pipe(
       catchError(error => {
-        // Manejar errores
         console.error('Ocurrió un error al enviar los datos:', error);
         return throwError(error);
       })
