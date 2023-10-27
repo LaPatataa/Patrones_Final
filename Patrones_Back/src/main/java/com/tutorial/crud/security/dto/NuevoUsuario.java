@@ -2,13 +2,16 @@ package com.tutorial.crud.security.dto;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
 import java.util.HashSet;
 import java.util.Set;
 
 public class NuevoUsuario {
     @NotBlank
+    @Pattern(regexp = "^[a-zA-Z\\s]+$", message = "El nombre no debe contener caracteres especiales")
     private String nombre;
     @NotBlank
+    @Pattern(regexp = "^[a-zA-Z\\s]+$", message = "El nombre no debe contener caracteres especiales")
     private String nombreUsuario;
     @Email
     private String email;
