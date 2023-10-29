@@ -3,6 +3,7 @@ import { BackendService } from '../service/crearEscuela.service';
 import { FormsModule } from '@angular/forms';
 import { TokenService } from '../service/token.service';
 
+
 @Component({
   selector: 'app-crear',
   templateUrl: './crear-escuela.component.html',

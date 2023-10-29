@@ -8,14 +8,14 @@ import { catchError } from 'rxjs/operators';
 })
 export class BackendService {
 
-  backendUrl = 'http://localhost:8080/exel/cargar'; 
+  backendUrl = 'http://localhost:8080/excel/cargar'; 
 
   constructor(private http: HttpClient) { }
 
   enviarDatos(nombreInstitucion: string, file: File) {
     const formData = new FormData();
     formData.append('nombreEscuela', nombreInstitucion);
-    formData.append('Archivo', file, file.name);
+    formData.append('archivo', file, file.name);
 
     return this.http.post(this.backendUrl, formData)
     .pipe(
