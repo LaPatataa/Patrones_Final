@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { BackendService } from '../service/crearEscuela.service';
 import { FormsModule } from '@angular/forms';
 import { TokenService } from '../service/token.service';
-
+import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-crear',
@@ -15,7 +16,7 @@ export class CrearEscuelaComponent {
   file: File;
   isLogged = false;
 
-  constructor(private backendService: BackendService, private tokenService: TokenService) { }
+  constructor(private backendService: BackendService, private tokenService: TokenService,private toastr: ToastrService,private router: Router,) { }
 
   ngOnInit() {
     if (this.tokenService.getToken()) {
@@ -33,10 +34,15 @@ export class CrearEscuelaComponent {
     if (this.nombreInstitucion && this.file) {
       this.backendService.enviarDatos(this.nombreInstitucion, this.file).subscribe(
         response => {
-          console.log('Respuesta del servidor:', response);
+          this.toastr.success('Envio Correcto', 'OK', {
+            timeOut: 3000, positionClass: 'toast-top-center'
+          });
+          this.router.navigate(['/pantalla-inicio']);
         },
         error => {
-          console.error('Error al enviar los datos:', error);
+          this.toastr.error('Envio Incorrecto', 'Archivo con datos incorrectos', {
+            timeOut: 3000, positionClass: 'toast-top-center'
+          });
         }
       );
     }else {
